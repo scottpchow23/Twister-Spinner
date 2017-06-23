@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,14 +28,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-N4-0sf">
+                                <rect key="frame" x="137" y="158" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HQA-fx-WMk"/>
+                                    <constraint firstAttribute="width" secondItem="oVu-N4-0sf" secondAttribute="height" multiplier="1:1" id="tpC-gQ-KJI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0vC-EL-F1o" firstAttribute="top" secondItem="oVu-N4-0sf" secondAttribute="bottom" constant="60" id="CIp-G5-YDx"/>
+                            <constraint firstItem="oVu-N4-0sf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RIi-j5-c7f"/>
                             <constraint firstItem="0vC-EL-F1o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xzJ-So-x4e"/>
                             <constraint firstItem="0vC-EL-F1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yod-qj-d8I"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bodyPartImageView" destination="oVu-N4-0sf" id="7Wx-w4-0wr"/>
                         <outlet property="bodyPartLabel" destination="0vC-EL-F1o" id="Z4Y-Vh-y0E"/>
                     </connections>
                 </viewController>
